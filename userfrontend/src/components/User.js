@@ -35,14 +35,18 @@ useEffect(()=>{
     }
 )
 },[])
+  
   return (
     <Container>
-        <Paper elevation = {3} style={paperStyle}>
+        <Paper elevation = {3}   style={{
+            padding: '50px 20px', width:600, margin:"20px auto",
+    backgroundColor: "lightgrey",border: "1px solid black"
+  }}>
             <h1>Create a Post</h1>
         <Box
       component="form"
       sx={{
-        '& > :not(style)': { m: 1, width: '25ch' },
+        '& > :not(style)': { m: 1, width: '40ch' },
       }}
       noValidate
       autoComplete="off"
@@ -62,7 +66,10 @@ useEffect(()=>{
     </Box>
     </Paper>
     <h1>Posts</h1>
-    <Paper elevation={3} style={paperStyle}>
+    <Paper elevation = {3}   style={{
+            padding: '50px 20px', width:600, margin:"20px auto",
+    backgroundColor: "lightgrey",border: "1px solid black"
+  }}>
         {users.map(user=>(
             <Paper elevation={6} style ={{margin:"10px",padding:"15px",textAlign:"left"}} key={user.id}>
                 <a href={user.link}>{user.link}</a><br/>
